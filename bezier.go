@@ -70,7 +70,7 @@ func main(){
 		panic(err)
 	}
 
-	if err := p.Save(8*vg.Inch, 8*vg.Inch, "points.png"); err != nil {
+	if err := p.Save(8*vg.Inch, 8*vg.Inch, "example.png"); err != nil {
 		panic(err)
 	}
 }
