@@ -1,6 +1,6 @@
 # Bezier-curve-in-Go
 My implementation of Bézier curve with example plot
-![Alt text](points.png?raw=true "Example Plot")
+![Alt text](example.png?raw=true "Example Plot")
 # Getting started
 Install gonum/plot for plots generation by using the command below:
 
