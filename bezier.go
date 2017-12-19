@@ -61,17 +61,15 @@ func main(){
 		panic(err)
 	}
 
-	p.Title.Text = "Zad 8"
 	p.X.Label.Text = "X"
 	p.Y.Label.Text = "Y"
 
 	err = plotutil.AddLinePoints(p,
-		"Krzywa Béziera", Points())
+		"Bézier Curve", Points())
 	if err != nil {
 		panic(err)
 	}
 
-	// Save the plot to a PNG file.
 	if err := p.Save(8*vg.Inch, 8*vg.Inch, "points.png"); err != nil {
 		panic(err)
 	}
