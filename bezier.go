@@ -32,22 +32,17 @@ func Points() plotter.XYs {
    for z:=0;z<=100;z++ {
     var current_x,current_y,t float64  = 0.0, 0.0, float64(z)/100.0
     var temp float64
-     
-      for i:=0;i<=n;i++ {
-        temp = waga[i] * x[i] * Bernstein(n,i,t)
-        current_x += temp        
+    var denominator float64 = 0.0
+      
+   for i:=0;i<=n;i++ {
+         temp = waga[i] * x[i] * Bernstein(n,i,t)
+        current_x += temp  
+         temp = waga[i] * y[i] * Bernstein(n,i,t)
+        current_y += temp   
+         temp = waga[i] * Bernstein(n,i,t)
+        denominator += temp     
         }
 
-      for i:=0;i<=n;i++ {
-        temp = waga[i] * y[i] * Bernstein(n,i,t)
-        current_y += temp        
-        }
-     
-    var denominator float64 = 0.0
-    for i:=0;i<=n;i++ {
-      temp = waga[i] * Bernstein(n,i,t)
-     denominator += temp
-     }
      pts[z].X = current_x / denominator
 	 pts[z].Y = current_y / denominator
    }
