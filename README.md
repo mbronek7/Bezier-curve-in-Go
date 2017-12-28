@@ -14,4 +14,4 @@ $ go run bezier.go
 ```
 
 For more information, see the
-[*Bezier curve* wikipedia](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).
+[*Bezier curve*](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).
