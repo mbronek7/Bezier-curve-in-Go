@@ -51,15 +51,12 @@ func Points() plotter.XYs {
 }
 func main(){
 
-	p, err := plot.New()
-	if err != nil {
-		panic(err)
-	}
+	p := plot.New()
 
 	p.X.Label.Text = "X"
 	p.Y.Label.Text = "Y"
 
-	err = plotutil.AddLinePoints(p,
+	err := plotutil.AddLinePoints(p,
 		"Bézier Curve", Points())
 	if err != nil {
 		panic(err)
